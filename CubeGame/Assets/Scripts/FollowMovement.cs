@@ -11,6 +11,6 @@ public class FollowMovement : MonoBehaviour
     void Update()
     {
         transform.position = player.position + offset;
-        Debug.Log(player.position);
+        
     }
 }
