@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     public float forwardForce = 500f;
     public float sideForce = 10f;
+    
+
 
     // Update is called once per frame
     void Update()
@@ -31,7 +33,10 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(-sideForce,0,0,ForceMode.VelocityChange);
         }
 
-     
+        if(rb.position.y <= -1f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
 
     }
 }

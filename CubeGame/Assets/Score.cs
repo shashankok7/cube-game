@@ -8,11 +8,11 @@ public class Score : MonoBehaviour
     public Transform player;
     void Update()
     {
-        if (Input.GetKey("w")|| Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
-        {
+        
+        
             timestart += Time.deltaTime;
-            scoreText.text = timestart.ToString();
-        }
+            scoreText.text = timestart.ToString("F2");
+       
        
     }
 }
